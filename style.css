@@ -1,0 +1,204 @@
+h1{
+    color: rgb(44, 66, 44);
+}
+body{
+    height: 100vh;
+    background-color: hsl(148, 38%, 91%);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'karla',sans-serif;
+    font-weight: 700;
+    
+    
+}
+
+.container{
+   
+    border-radius: 10px;
+      padding: 50px 50px;
+     background: white;
+     font-family: 'karla',sans-serif;
+}
+
+
+.input-container {
+    display: flex;
+    gap: 20px; 
+}
+
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+label {
+    margin-bottom: 5px; 
+    font-size: 1rem;
+    color: #333; 
+}
+
+.required{
+    color: darkgreen;
+}
+
+
+#input-firstName, #input-lastName {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#input-firstName:hover, #input-lastName:hover{
+    border: seagreen solid 2px;
+   
+}
+
+#email-address{
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+   
+#input-emailaddress{
+    padding: 10px ;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#input-emailaddress:hover{
+    border: seagreen solid 2px;
+}
+
+#input-querytype{
+    color: #333;
+    font-size: 1rem;
+   
+}
+
+#genral-enquiry, #support-request{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-radioBox{
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.input-radioBox:hover{
+    border: seagreen solid 2px;
+}
+
+
+#messages{
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem
+}
+#input-messages{
+    padding: 100px 150px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+#input-messages:hover{
+    border: seagreen solid 2px;
+}
+
+/*
+#btn{
+    color: #333;
+    cursor: pointer;
+    gap: 10px;
+    
+}
+
+.sumbit{
+    border: 2px solid black;
+    padding: 10px 300px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 5px;
+    margin-bottom: 5px;
+   background-color: rgb(44, 66, 44);
+   color: white;
+}
+   */
+.error{
+    border-color: #e74c3c;
+}
+.error-message{
+    color: #e74c3c;
+    display: none;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+#submit-btn{
+    top:50%;
+    background-color:rgb(26, 61, 59);
+    color: #fff;
+    border:none;
+    border-radius:10px;
+    padding: 10px 300px ;
+    font-weight: 16px;
+    cursor: pointer;
+}
+
+#consent{
+    color: #333;
+    font-size: 1rem;
+}
+
+#msg-sent {
+    background-color: rgb(26, 61, 59);
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    width: 350px;
+    height: 100px;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; 
+    pointer-events: none; 
+    animation-name: animatemsg;
+}
+
+
+@keyframes animatemsg {
+    from {
+        top: -100px; 
+        opacity: 0;
+    }
+    to {
+        top: 20px; 
+        opacity: 1;
+    }
+}
+#msg-sent.show {
+    opacity: 1;
+    animation: animatemsg 0.2s ease-out;
+    pointer-events: auto; 
+}
+
